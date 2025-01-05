@@ -165,6 +165,12 @@ export default class WakaTime extends Plugin {
 
     args.push('--entity', Utils.quote(file));
 
+    const workspacesPlugin = this.app.internalPlugins.plugins.workspaces
+
+    if (workspacesPlugin && workspacesPlugin.enabled) {
+      args.push('--project', '[Obsidian] ' + workspacesPlugin.instance.activeWorkspace)
+    }
+
     const user_agent = 'obsidian/' + apiVersion + ' obsidian-wakatime/' + this.manifest.version;
     args.push('--plugin', Utils.quote(user_agent));
 
