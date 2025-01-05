@@ -46,3 +46,6 @@ For more general troubleshooting info, see the [wakatime-cli Troubleshooting Sec
 [wakatime-cli help]: https://github.com/wakatime/wakatime-cli/blob/develop/TROUBLESHOOTING.md
 [how to debug]: https://wakatime.com/faq#debug-plugins
 [plugins status page]: https://wakatime.com/plugin-status
+
+## Fork changes:
+Into every heartbeat, the project name is added. The project name is constructed as `[Obsidian] ` + the active workspace name, which is retrieved from the Obsidian core plugin [Workspaces](https://help.obsidian.md/Plugins/Workspaces).
